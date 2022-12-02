@@ -72,17 +72,26 @@ WSGI_APPLICATION = 'myworld.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+# https://docs.djangoproject.com/en/4.1/ref/settings/#databas
 
+#DATABASES = {
+#
+#   
+#   'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': BASE_DIR / 'db.sqlite3',
+#    }
+#}
 DATABASES = {
-
-    
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': 'mydb',
+       'USER': 'postgres',
+       'PASSWORD': 'mypassword',
+       'HOST': 'database-1.corviax9nlyg.us-east-2.rds.amazonaws.com',
+       'PORT': '5432',
+   }
 }
-
 
 
 # Password validation
